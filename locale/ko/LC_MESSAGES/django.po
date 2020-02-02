@@ -66,7 +66,7 @@ msgstr ""
 #: app/templates/profile.html:129
 msgid "NHN Bugs work 2"
 msgstr ""
-"5월 7일 NHN엔터가 네오위즈인터넷 인수, 8월 11일 NHN벅스로 사명 변경"
+"5월 7일 NHN엔터 네오위즈인터넷 인수, 8월 11일 NHN벅스로 사명 변경"
 
 #: app/templates/profile.html:130
 msgid "NHN Bugs work 3"
@@ -80,7 +80,7 @@ msgstr "네오위즈인터넷 벅스 DB운영팀 정규직 전환 (벅스 음원
 #: app/templates/profile.html:132
 msgid "NHN Bugs work 5"
 msgstr ""
-"1월 25일 네오위즈벅스가 네오위즈인터넷 합병, 4월 15일 네오위즈인터넷으로 사명 변경"
+"1월 25일 네오위즈벅스 네오위즈인터넷 합병, 4월 15일 네오위즈인터넷으로 사명 변경"
 
 #: app/templates/profile.html:133
 msgid "NHN Bugs work 6"
