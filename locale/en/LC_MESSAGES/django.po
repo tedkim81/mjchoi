@@ -160,7 +160,7 @@ msgstr "Received the Silver Prize at the 51st National Dance Performing Arts Com
 
 #: app/templates/profile.html:163
 msgid "Certifications Awards 3"
-msgstr "Madam Ballet Grand prix in Tokyo. Encouragement Prize."
+msgstr "Madam Ballet Grand prix in Tokyo. 4th place."
 
 #: app/templates/profile.html:164
 msgid "Certifications Awards 4"
