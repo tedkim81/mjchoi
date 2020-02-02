@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-02 16:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app/templates/profile.html:104
+msgid "Mijin Choi"
+msgstr "Mijin Choi"
+
+#: app/templates/profile.html:105
+msgid "myintro"
+msgstr ""
+"I am an ordinary office worker who has been in office for more than 10 years "
+"and has a slightly unique career in which both my major and hobby are art. I "
+"majored in what I thought I was good at, and I did what I like by hobby, but "
+"now I'm stopping for a while to re-check my direction and goals. I like to "
+"teach others, and I respect the value of the arts, especially ballet. I'm "
+"interested in keywords like Work Life Balance, Health, Education, and New "
+"Trends, and I want to make our one and once life more beautiful and happy. I "
+"want to use energy to create such a world, so I am thinking hard today."
+
+#: app/templates/profile.html:113
+msgid "Looking for work"
+msgstr "Looking for work ;)"
+
+#: app/templates/profile.html:114
+msgid "Seongnam City Ballet"
+msgstr "Planning and PR at Seongnam City Ballet"
+
+#: app/templates/profile.html:115
+msgid "NHN Ballet fit"
+msgstr "Instructor for Ballet Fit Club at NHN"
+
+#: app/templates/profile.html:120
+msgid "Yejongplie"
+msgstr "Yejongplie Ballet Academy (retirement due to business closure)"
+
+#: app/templates/profile.html:122
+msgid "Yejongplie work"
+msgstr "Business, Finance, Office, Marketing"
+
+#: app/templates/profile.html:126
+msgid "NHN Bugs"
+msgstr "NHN Bugs Corp."
+
+#: app/templates/profile.html:128
+msgid "NHN Bugs work 1"
+msgstr "Content Planning Team. Bugs content planning and operation, AI operation."
+
+#: app/templates/profile.html:129
+msgid "NHN Bugs work 2"
+msgstr "NHN Entertainment acquired Neowiz Internet on May 7 and renamed NHN Bugs on August 11."
+
+#: app/templates/profile.html:130
+msgid "NHN Bugs work 3"
+msgstr "Neowiz Internet Bugs Service Operation Team. Manage and operate Bugs payments, memberships, services, and customer centers."
+
+#: app/templates/profile.html:131
+msgid "NHN Bugs work 4"
+msgstr "Neowiz Internet Bugs DB Operation Team. Switched to full-time job. Bugs sound source DB operation and lyrics management."
+
+#: app/templates/profile.html:132
+msgid "NHN Bugs work 5"
+msgstr "Neowiz Bugs merged with Neowiz Internet on January 25 and renamed Neowiz Internet on April 15."
+
+#: app/templates/profile.html:133
+msgid "NHN Bugs work 6"
+msgstr "Joined Eins Digital Inc. Bugs DB Operation Team."
+
+#: app/templates/profile.html:137
+msgid "KBS"
+msgstr "KBS Broadcasting Content Team"
+
+#: app/templates/profile.html:142
+msgid "Private Experience 1"
+msgstr "Seongnam City Ballet foundation performance planning"
+
+#: app/templates/profile.html:143
+msgid "Private Experience 2"
+msgstr "Ballet solo in the 2nd Community Dance Festival."
+
+#: app/templates/profile.html:144
+msgid "Private Experience 3"
+msgstr "Sound design of android app(TAKE FIVE)."
+
+#: app/templates/profile.html:145
+msgid "Private Experience 4"
+msgstr "Music arrangement of the team who participated in Dancing 9."
+
+#: app/templates/profile.html:146
+msgid "Private Experience 5"
+msgstr "Sound design of android app(Piano Keyboard)."
+
+#: app/templates/profile.html:147
+msgid "Private Experience 6"
+msgstr "Arranged music for G.NI jazz dance performance. Composition and arrangement of modern dance music for college entrance examination."
+
+#: app/templates/profile.html:148
+msgid "Private Experience 7"
+msgstr "Music composition and arrangement of the team who participated in Haneum Dance Competition."
+
+#: app/templates/profile.html:149
+msgid "Private Experience 8"
+msgstr "Conduct choir at Songnae Sungmun Church."
+
+#: app/templates/profile.html:150
+msgid "Private Experience 9"
+msgstr "Full-time piano instructor at Woojin Piano Academy."
+
+#: app/templates/profile.html:151
+msgid "Private Experience 10"
+msgstr "Promote performances at Moim-Modoo(modern music performance group)."
+
+#: app/templates/profile.html:152
+msgid "Private Experience 11"
+msgstr "Presentation of contemporary music works at CUK regular presentation."
+
+#: app/templates/profile.html:153
+msgid "Private Experience 12"
+msgstr "Conduct choir at Bucheon Uiseong Church."
+
+#: app/templates/profile.html:154
+msgid "Private Experience 13"
+msgstr "Participated in the Darmstadt International Contemporary Music Festival."
+
+#: app/templates/profile.html:155
+msgid "Private Experience 14"
+msgstr "Conduct high school choir at Bucheon Uiseong Church."
+
+#: app/templates/profile.html:156
+msgid "Private Experience 15"
+msgstr "Full-time piano instructor at Creative Music Academy."
+
+#: app/templates/profile.html:157
+msgid "Private Experience 16"
+msgstr "Conduct elementary choir at Bucheon Uiseong Church."
+
+#: app/templates/profile.html:161
+msgid "Certifications Awards 1"
+msgstr "Certification in Progressing Ballet Technique."
+
+#: app/templates/profile.html:162
+msgid "Certifications Awards 2"
+msgstr "Received the Silver Prize at the 51st National Dance Performing Arts Competition."
+
+#: app/templates/profile.html:163
+msgid "Certifications Awards 3"
+msgstr "Madam Ballet Grand prix in Tokyo. Encouragement Prize."
+
+#: app/templates/profile.html:164
+msgid "Certifications Awards 4"
+msgstr "Grand Prize at the 2nd National Dance Competition (1st overall ballet category)."
+
+#: app/templates/profile.html:165
+msgid "Certifications Awards 5"
+msgstr "Winner of the 1st Ballet Mate Grand Prix Grand Prix Award (1st overall)"
+
+#: app/templates/profile.html:166
+msgid "Certifications Awards 6"
+msgstr "World Grand Prix Dance Competition Ballet Gold Prize"
+
+#: app/templates/profile.html:167
+msgid "Certifications Awards 7"
+msgstr "1st Prize in Advertising & Video Music at the 1st Korea Visual Music Festival."
+
+#: app/templates/profile.html:171
+msgid "Education 1"
+msgstr "Dongguk University, Department of Practical Music. Completion of only one semester."
+
+#: app/templates/profile.html:172
+msgid "Education 2"
+msgstr "Graduated from the Catholic University of Music."
+
+#: app/templates/profile.html:173
+msgid "Education 3"
+msgstr "Transfer to Bucheon Girls High School."
+
+#: app/templates/profile.html:174
+msgid "Education 4"
+msgstr "Entered Deokwon High School of Dance and Ballet."
+
+#: app/templates/profile.html:175
+msgid "Education 5"
+msgstr "University of Alberta in Edmonton. Language study."
+
+#: mjchoi/settings.py:111
+msgid "English"
+msgstr ""
+
+#: mjchoi/settings.py:112
+msgid "Korean"
+msgstr ""

@@ -1,0 +1,179 @@
+{% load i18n %}
+{% load tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>I am Mijin Choi</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  	<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	body {
+		padding-bottom: 30px;
+	}
+	header {
+		width: 100%; height: 50px; color: white;
+	}
+	header .container {
+		line-height: 50px; vertical-align: middle;
+	}
+	header a, header a:hover {
+		color: #FFFFFF;
+	}
+	header .left {
+		float: left;
+	}
+	header .right {
+		float: right;
+	}
+	.profile-info {
+		margin-top: 20px;
+	}
+	.profile-img {
+		width: 140px; height: 140px;
+	}
+	.profile-img img {
+		width: 100%; height: 100%; border-radius: 50%;
+	}
+	.profile-text {
+		margin-top: 20px;
+	}
+	@media all and (min-width:768px) {
+		.profile-info {
+			position: relative;
+		}
+		.profile-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.profile-text {
+			padding-left: 170px;
+		}
+	}
+	.myintro {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.section-title {
+		width: 100%; padding: 15px; background-color: #eeeeee; margin-top: 20px; font-weight: bold;
+	}
+	.cont-list {
+		margin-top: 15px;
+	}
+	.cont-span {
+		margin-left: 10px;
+	}
+	.cont-li {
+		margin-bottom: 15px;
+	}
+	.text-highlight {
+		font-weight: bold;
+	}
+	.text-big {
+		font-size: 15px;
+	}
+	</style>
+</head>
+<body>
+	{% get_current_language as LANGUAGE_CODE %}
+	<header class="bg-primary">
+		<div class="container">
+			<div class="left text-big">I am Mijin Choi</div>
+			<div class="right">
+			{% if LANGUAGE_CODE == 'ko' %}
+				<a href="./?lang=en">In English, please.</a>
+			{% else %}
+				<a href="./?lang=ko">한글로 보기</a>
+			{% endif %}
+			</div>
+		</div>
+	</header>
+	<section class="container">
+		<div class="profile-info">
+			<div class="profile-img">
+				<img src="{% static 'img/mjprofile_square.jpg' %}" />
+			</div>
+			<div class="profile-text">
+				<div class="text-highlight">{% trans "Mijin Choi" %}</div>
+				<div class="myintro">{% trans "myintro" %}</div>
+				<div>Email: <a href="mailto:luvqueen7@naver.com">luvqueen7@naver.com</a></div>
+				<div>Facebook: <a href="https://www.facebook.com/luvmoonbow" target="_blank">https://www.facebook.com/luvmoonbow</a></div>
+				<div>Instagram: @luvmoonbow</div>
+			</div>
+		</div>
+		<div class="section-title">Today</div>
+		<ul class="cont-list">
+			<li class="cont-li">{% trans "Looking for work" %}</li>
+			<li class="cont-li"><span>2019.01 ~ Today</span><span class="cont-span">{% trans "Seongnam City Ballet" %}</span></li>
+			<li class="cont-li"><span>2018.09 ~ Today</span><span class="cont-span">{% trans "NHN Ballet fit" %}</span></li>
+		</ul>
+		<div class="section-title">Professional Experience</div>
+		<ul class="cont-list">
+			<li class="cont-li">
+				<span>2019.09 ~ 2019.12</span><span class="cont-span">{% trans "Yejongplie" %}</span>
+				<ul>
+					<li>{% trans "Yejongplie work" %}</li>
+				</ul>
+			</li>
+			<li class="cont-li">
+				<span>2009.02 ~ 2019.08</span><span class="cont-span">{% trans "NHN Bugs" %}</span>
+				<ul>
+					<li><span>2016.03</span><span class="cont-span">{% trans "NHN Bugs work 1" %}</span></li>
+					<li><span>2015.05</span><span class="cont-span">{% trans "NHN Bugs work 2" %}</span></li>
+					<li><span>2012.03</span><span class="cont-span">{% trans "NHN Bugs work 3" %}</span></li>
+					<li><span>2011.02</span><span class="cont-span">{% trans "NHN Bugs work 4" %}</span></li>
+					<li><span>2010.01</span><span class="cont-span">{% trans "NHN Bugs work 5" %}</span></li>
+					<li><span>2009.02</span><span class="cont-span">{% trans "NHN Bugs work 6" %}</span></li>
+				</ul>
+			</li>
+			<li class="cont-li">
+				<span>2007.01 ~ 2008.11</span><span class="cont-span">{% trans "KBS" %}</span>
+			</li>
+		</ul>
+		<div class="section-title">Private Experience</div>
+		<ul class="cont-list">
+			<li class="cont-li"><span>2009.03</span><span class="cont-span">{% trans "Private Experience 1" %}</span></li>
+			<li class="cont-li"><span>2018.10</span><span class="cont-span">{% trans "Private Experience 2" %}</span></li>
+			<li class="cont-li"><span>2014.08</span><span class="cont-span">{% trans "Private Experience 3" %}</span></li>
+			<li class="cont-li"><span>2013.07</span><span class="cont-span">{% trans "Private Experience 4" %}</span></li>
+			<li class="cont-li"><span>2012.06</span><span class="cont-span">{% trans "Private Experience 5" %}</span></li>
+			<li class="cont-li"><span>2008 ~ 2011</span><span class="cont-span">{% trans "Private Experience 6" %}</span></li>
+			<li class="cont-li"><span>2007.11</span><span class="cont-span">{% trans "Private Experience 7" %}</span></li>
+			<li class="cont-li"><span>2007.01 ~ 2007.09</span><span class="cont-span">{% trans "Private Experience 8" %}</span></li>
+			<li class="cont-li"><span>2006.03 ~ 2006.08</span><span class="cont-span">{% trans "Private Experience 9" %}</span></li>
+			<li class="cont-li"><span>2006.02 ~ 2008.04</span><span class="cont-span">{% trans "Private Experience 10" %}</span></li>
+			<li class="cont-li"><span>2005.05</span><span class="cont-span">{% trans "Private Experience 11" %}</span></li>
+			<li class="cont-li"><span>2004.11 ~ 2006.12</span><span class="cont-span">{% trans "Private Experience 12" %}</span></li>
+			<li class="cont-li"><span>2002.07</span><span class="cont-span">{% trans "Private Experience 13" %}</span></li>
+			<li class="cont-li"><span>2001.01 ~ 2006.12</span><span class="cont-span">{% trans "Private Experience 14" %}</span></li>
+			<li class="cont-li"><span>2000.09 ~ 2001.02</span><span class="cont-span">{% trans "Private Experience 15" %}</span></li>
+			<li class="cont-li"><span>1998.01 ~ 2000.12</span><span class="cont-span">{% trans "Private Experience 16" %}</span></li>
+		</ul>
+		<div class="section-title">Certifications &amp; Awards</div>
+		<ul class="cont-list">
+			<li class="cont-li"><span>2020.01</span><span class="cont-span">{% trans "Certifications Awards 1" %}</span></li>
+			<li class="cont-li"><span>2019.11</span><span class="cont-span">{% trans "Certifications Awards 2" %}</span></li>
+			<li class="cont-li"><span>2018.09</span><span class="cont-span">{% trans "Certifications Awards 3" %}</span></li>
+			<li class="cont-li"><span>2018.07</span><span class="cont-span">{% trans "Certifications Awards 4" %}</span></li>
+			<li class="cont-li"><span>2017.11</span><span class="cont-span">{% trans "Certifications Awards 5" %}</span></li>
+			<li class="cont-li"><span>2017.09</span><span class="cont-span">{% trans "Certifications Awards 6" %}</span></li>
+			<li class="cont-li"><span>2014.12</span><span class="cont-span">{% trans "Certifications Awards 7" %}</span></li>
+		</ul>
+		<div class="section-title">Education &amp; Other Experience</div>
+		<ul class="cont-list">
+			<li class="cont-li"><span></span>2015<span class="cont-span">{% trans "Education 1" %}</span></li>
+			<li class="cont-li"><span></span>2006<span class="cont-span">{% trans "Education 2" %}</span></li>
+			<li class="cont-li"><span></span>1995<span class="cont-span">{% trans "Education 3" %}</span></li>
+			<li class="cont-li"><span></span>1995<span class="cont-span">{% trans "Education 4" %}</span></li>
+			<li class="cont-li"><span></span>2000.07 ~ 2000.08<span class="cont-span">{% trans "Education 5" %}</span></li>
+		</ul>
+	</section>
+</body>
+</html>
