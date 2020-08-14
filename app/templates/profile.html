@@ -44,6 +44,9 @@
 	.profile-text {
 		margin-top: 20px;
 	}
+	ul {
+		padding-inline-start: 27px;
+	}
 	@media all and (min-width:768px) {
 		.profile-info {
 			position: relative;
@@ -55,6 +58,9 @@
 		}
 		.profile-text {
 			padding-left: 170px;
+		}
+		ul {
+			padding-inline-start: 40px;
 		}
 	}
 	.myintro {
@@ -71,7 +77,10 @@
 		margin-left: 10px;
 	}
 	.cont-li {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
+	}
+	.cont-li li {
+		margin: 5px 0;
 	}
 	.text-highlight {
 		font-weight: bold;
@@ -117,6 +126,7 @@
 		<div class="section-title">Today</div>
 		<ul class="cont-list">
 			<li class="cont-li">{% trans "Looking for work" %}</li>
+			<li class="cont-li">{% trans "Self development" %}</li>
 		</ul>
 		<div class="section-title">Professional Experience</div>
 		<ul class="cont-list">
@@ -129,10 +139,40 @@
 			<li class="cont-li">
 				<span>2009.02 ~ 2019.08</span><span class="cont-span">{% trans "NHN Bugs" %}</span>
 				<ul>
-					<li><span>2016.03</span><span class="cont-span">{% trans "NHN Bugs work 1" %}</span></li>
+					<li>
+						<span>2016.03</span><span class="cont-span">{% trans "NHN Bugs work 1" %}</span>
+						<ul>
+							<li>{% trans "NHN Bugs work 1-1" %}</li>
+							<li>{% trans "NHN Bugs work 1-2" %}</li>
+							<li>{% trans "NHN Bugs work 1-3" %}</li>
+							<li>{% trans "NHN Bugs work 1-4" %}</li>
+						</ul>
+					</li>
 					<li><span>2015.05</span><span class="cont-span">{% trans "NHN Bugs work 2" %}</span></li>
-					<li><span>2012.03</span><span class="cont-span">{% trans "NHN Bugs work 3" %}</span></li>
-					<li><span>2011.02</span><span class="cont-span">{% trans "NHN Bugs work 4" %}</span></li>
+					<li>
+						<span>2012.03</span><span class="cont-span">{% trans "NHN Bugs work 3" %}</span>
+						<ul>
+							<li>{% trans "NHN Bugs work 3-1" %}</li>
+							<li>{% trans "NHN Bugs work 3-2" %}</li>
+							<li>{% trans "NHN Bugs work 3-3" %}</li>
+							<li>{% trans "NHN Bugs work 3-4" %}</li>
+							<li>{% trans "NHN Bugs work 3-5" %}</li>
+							<li>{% trans "NHN Bugs work 3-6" %}</li>
+							<li>{% trans "NHN Bugs work 3-7" %}</li>
+							<li>{% trans "NHN Bugs work 3-8" %}</li>
+							<li>{% trans "NHN Bugs work 3-9" %}</li>
+						</ul>
+					</li>
+					<li>
+						<span>2011.02</span><span class="cont-span">{% trans "NHN Bugs work 4" %}</span>
+						<ul>
+							<li>{% trans "NHN Bugs work 4-1" %}</li>
+							<li>{% trans "NHN Bugs work 4-2" %}</li>
+							<li>{% trans "NHN Bugs work 4-3" %}</li>
+							<li>{% trans "NHN Bugs work 4-4" %}</li>
+							<li>{% trans "NHN Bugs work 4-5" %}</li>
+						</ul>
+					</li>
 					<li><span>2010.01</span><span class="cont-span">{% trans "NHN Bugs work 5" %}</span></li>
 					<li><span>2009.02</span><span class="cont-span">{% trans "NHN Bugs work 6" %}</span></li>
 				</ul>
@@ -143,6 +183,7 @@
 		</ul>
 		<div class="section-title">Private Experience</div>
 		<ul class="cont-list">
+			<li class="cont-li"><span>2020.04 ~ 2020.08</span><span class="cont-span">{% trans "Private Experience 18" %}</span></li>
 			<li class="cont-li"><span>2018.09 ~ 2020.02</span><span class="cont-span">{% trans "Private Experience 17" %}</span></li>
 			<li class="cont-li"><span>2019.03</span><span class="cont-span">{% trans "Private Experience 1" %}</span></li>
 			<li class="cont-li"><span>2018.10</span><span class="cont-span">{% trans "Private Experience 2" %}</span></li>
