@@ -135,7 +135,7 @@ msgstr "스미싱 피해 관련 PG사 커뮤니케이션 및 CS 운영 총괄"
 
 #: app/templates/profile.html:154
 msgid "NHN Bugs work 3-9"
-msgstr "수사기관 관련 공문 관리 총괄"
+msgstr "통신비밀보호업무 등의 수사기관 관련 공문 관리 총괄"
 
 #: app/templates/profile.html:158
 msgid "NHN Bugs work 4"
