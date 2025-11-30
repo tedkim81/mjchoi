@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>I am Mijin Choi</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	body {
+		padding-bottom: 30px;
+	}
+	header {
+		width: 100%; height: 50px; color: white;
+	}
+	header .container {
+		line-height: 50px; vertical-align: middle;
+	}
+	header a, header a:hover {
+		color: #FFFFFF;
+	}
+	header .left {
+		float: left;
+	}
+	header .right {
+		float: right;
+	}
+	.profile-info {
+		margin-top: 20px;
+	}
+	.profile-img {
+		width: 140px; height: 140px;
+	}
+	.profile-img img {
+		width: 100%; height: 100%; border-radius: 50%;
+	}
+	.profile-text {
+		margin-top: 20px;
+	}
+	ul {
+		padding-inline-start: 27px;
+	}
+	@media all and (min-width:768px) {
+		.profile-info {
+			position: relative;
+		}
+		.profile-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.profile-text {
+			padding-left: 170px;
+		}
+		ul {
+			padding-inline-start: 40px;
+		}
+	}
+	.myintro {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.section-title {
+		width: 100%; padding: 15px; background-color: #eeeeee; margin-top: 20px; font-weight: bold;
+	}
+	.cont-list {
+		margin-top: 15px;
+	}
+	.cont-span {
+		margin-left: 10px;
+	}
+	.cont-li {
+		margin-bottom: 10px;
+	}
+	.cont-li li {
+		margin: 5px 0;
+	}
+	.text-highlight {
+		font-weight: bold;
+	}
+	.text-big {
+		font-size: 15px;
+	}
+	.bg-primary {
+		background-color: #6F7170;
+	}
+	</style>
+	<script type="text/javascript">
+	// Language translation data
+	var introTextKo = '음악(클래식 작곡)을 전공하고, 인터넷 음악 서비스를 만드는 회사에서 최근 10년 동안 일했습니다. 작년에 음악보다 더 좋아했던 발레와 관련된 일로 오퍼를 받아 이직했지만, 4개월 만에 불가피하게 폐업하면서 새로운 직장을 찾게 되었습니다. 코로나 바이러스로 인해 더 어려운 상황이 되었지만, 더 긍정적인 마음으로 오늘 하루를 소중히 여기며 살아가고 있습니다.';
+	var introTextEn = 'I majored in music and worked for an internet music service company in the last 10 years. I liked ballet more than music, and I moved to the ballet academy, but after four months the academy was closed, and now I am looking for a new job. Unfortunately, my jobless life is getting longer due to the spread of the coronavirus, but I am hopefully moving forward.';
+	
+	var intro2TextKo = '삼 남매의 맞이로 자라서 책임감이 아주 강한 편이고, 전공의 영향인지 어떤 일에 몰두하면 될 때까지 섬세하게 파고드는 성향이 있으며, "나는 워커홀릭인가?" 싶을 정도로 일의 성취감을 통해 얻는 행복을 크게 느끼는 편입니다. 무슨 일이든 대체로 열정적인 편인데, 이것은 제 좌우명 때문인 것 같습니다. 중1 수업시간에 자신의 좌우명을 쓰라는 숙제가 있었는데, "모든 일에 있어 최선을 다하자" 라고 써서 낸 이후 자연스럽게 인생의 좌우명이 되었습니다.';
+	var intro2TextEn = 'As I grew up as the first daughter of three siblings, I have a very strong sense of responsibility, and I feel a lot of happiness from the achievement of work, and I am passionate about everything. My motto is "Let\'s do our best in everything". The motto that I wrote down as homework during my first year in middle school naturally became the motto of life.';
+	
+	var intro3TextKo = '또한 아는 지식은 아낌없이 공유하길 좋아하고, 예술에 대한 가치를 존중하며 특히 발레를 사랑합니다. 워라밸, 건강, 교육, 뉴트렌드, IT 같은 키워드에 관심이 많고, 딱 한 번뿐인 우리 모두의 인생이 좀 더 아름답고 행복하길 꿈꾸며, 그런 세상을 만드는 일에 에너지를 쓰고 싶다는 로망이 있습니다. 최근에 재미삼아 성격유형검사(MBTI)를 해봤는데, 저는 ENFJ형이라고 나왔습니다. 위의 내용들과 비슷한가요? ^^';
+	var intro3TextEn = 'I love to share the knowledge I know generously, respect the value of art, and especially love ballet. I\'m interested in keywords like Work Life Balance, Health, Education, and New Trends, IT. And I dream of having a one-time life more beautiful and happy, and I have the desire to use energy to create a world like that. I have done MBTI test these days, and I am ENFJ type. Do you think it\'s right? :)';
+
+	var translations = {
+		'Mijin Choi': '최미진 (Mijin Choi)',
+		'Looking for work': '새 일터 찾는 중!!!',
+		'Self development': '자기 개발 중 (SQL, 영어)',
+		'Yejongplie': '예종플리에 발레아카데미 (폐업으로 인한 퇴직)',
+		'Yejongplie work': '경영, 재무, 사무, 마케팅 등 학원 운영 전반에 대한 총괄',
+		'NHN Bugs': 'NHN벅스',
+		'NHN Bugs work 1': 'NHN벅스 컨텐츠기획팀 이동 및 업무 변경',
+		'NHN Bugs work 1-1': '벅스 AI 서비스 운영',
+		'NHN Bugs work 1-2': '벅스 뮤직 PD 앨범 관리',
+		'NHN Bugs work 1-3': '벅스 컨텐츠 CS 관련 총괄',
+		'NHN Bugs work 1-4': '벅스 클래식 음악 컨텐츠 관련 총괄',
+		'NHN Bugs work 2': '5월 7일 NHN엔터 네오위즈인터넷 인수, 8월 11일 NHN벅스로 사명 변경',
+		'NHN Bugs work 3': '네오위즈인터넷 벅스 서비스운영팀 이동 및 업무 변경',
+		'NHN Bugs work 3-1': '벅스 고객센터 홈페이지 개편 기획',
+		'NHN Bugs work 3-2': '벅스 CS 어드민 툴 개선 기획',
+		'NHN Bugs work 3-3': '벅스 IVR, 1:1문의 개선 기획',
+		'NHN Bugs work 3-4': '벅스 결제, 멤버십, 서비스 VOC 관리',
+		'NHN Bugs work 3-5': '벅스 서비스 오픈 전 운영 관련 사전 검토 및 개선 총괄',
+		'NHN Bugs work 3-6': '벅스 공지사항, FAQ 등 CS 운영 관련 서비스 페이지 관리',
+		'NHN Bugs work 3-7': '벅스 고객센터 지원 및 관리',
+		'NHN Bugs work 3-8': '스미싱 피해 관련 PG사 커뮤니케이션 및 CS 운영 총괄',
+		'NHN Bugs work 3-9': '통신비밀보호업무 등의 수사기관 관련 공문 관리 총괄',
+		'NHN Bugs work 4': '네오위즈인터넷 벅스 DB운영팀 정규직 전환',
+		'NHN Bugs work 4-1': '음원 신청 서비스 기획 및 PM',
+		'NHN Bugs work 4-2': '음원 DB 생성 및 검수 (주요 파트 클래식)',
+		'NHN Bugs work 4-3': '음원 발급 총괄',
+		'NHN Bugs work 4-4': '음원 서비스 노출 관련 업무',
+		'NHN Bugs work 4-5': '벅스 가사 작업자 관리 및 입력 tool 및 프로세스 운영 개선',
+		'NHN Bugs work 5': '1월 25일 네오위즈벅스 네오위즈인터넷 합병, 4월 15일 네오위즈인터넷으로 사명 변경',
+		'NHN Bugs work 6': '아인스디지탈 벅스 DB운영팀 입사 (파견직)',
+		'KBS': 'KBS 한국방송공사 방송 콘텐츠팀 입사 (계약직)',
+		'Private Experience 18': '발레 교사 프로그램(RAD, YSM) 이수',
+		'Private Experience 17': 'NHN 발레핏 동호회 강사',
+		'Private Experience 1': '성남시티발레단 창단 공연 기획',
+		'Private Experience 2': '제2회 국민무용축제 공연 참가 (발레 솔로 작품 실연)',
+		'Private Experience 3': 'Android App 미션오목(TAKE FIVE) 사운드 디자인',
+		'Private Experience 4': '댄싱9 프로모션 재즈댄스공연 DANCE.DA 무용음악 편곡',
+		'Private Experience 5': 'Android App 피아노키보드 사운드 디자인',
+		'Private Experience 6': '신촌 G.NI 재즈댄스 공연 음악 편곡, 현대 무용 입시 음악 작/편곡 외 다수',
+		'Private Experience 7': '한음무용콩쿠르 현대무용 참가팀 무용음악 작/편곡',
+		'Private Experience 8': '송내 성문교회 주일 2부 예배 지휘',
+		'Private Experience 9': '우진 피아노학원 피아노 전임 강사',
+		'Private Experience 10': 'moim-modoo(현대음악 공연 단체) 공연 홍보 담당',
+		'Private Experience 11': 'CUK 현대음악연구회 정기발표회 현대음악 작품발표',
+		'Private Experience 12': '부천 의성교회 주일 4부 예배 지휘',
+		'Private Experience 13': 'Darmstadt 국제 현대 음악제 참가 (독일)',
+		'Private Experience 14': '부천 의성교회 고등부 성가대 지휘',
+		'Private Experience 15': '창조 음악학원 피아노 전임 강사',
+		'Private Experience 16': '부천 의성교회 초등부 성가대 지휘',
+		'Certifications Awards 10': '키즈 영어 발레 2급',
+		'Certifications Awards 9': '키즈 바른자세 발레 2급',
+		'Certifications Awards 8': '무용 지도자 1급',
+		'Certifications Awards 1': 'PBT 자격증 취득(Certification in Progressing Ballet Technique)',
+		'Certifications Awards 2': '제51회 전국 무용 예능 실기대회 발레 일반부 은상',
+		'Certifications Awards 3': '일본 마담발레 그랑프리 대회(Madam Ballet Grand prix in Tokyo) 장려상',
+		'Certifications Awards 4': '제2회 국민 무용 콩쿨 최우수상 (발레부문 전체 1등)',
+		'Certifications Awards 5': '제1회 발레메이트 그랑프리 그랑프리상 (전체 1등)',
+		'Certifications Awards 6': '세계 그랑프리 무용 경연대회 금상',
+		'Certifications Awards 7': '제1회 대한민국 영상 음악제 국회부의장상 (작곡상, 광고영상음악 부문 1등)',
+		'Education 1': '동국대학교 문화예술대학원 실용음악과 중퇴',
+		'Education 2': '가톨릭대학교 음악과 작곡전공 졸업',
+		'Education 3': '부천여자고등학교 이과계열 전학',
+		'Education 4': '덕원예술고등학교 무용과 발레전공 입학',
+		'Education 5': 'University of Alberta in Edmonton 어학연수 (캐나다)'
+	};
+
+	// Get language from query string
+	function getLanguage() {
+		var urlParams = new URLSearchParams(window.location.search);
+		var lang = urlParams.get('lang');
+		if (lang === 'en') {
+			return 'en';
+		}
+		return 'ko';
+	}
+
+	// Translate text
+	function t(text) {
+		var lang = getLanguage();
+		if (lang === 'en') {
+			return text;  // Return original English text
+		}
+		if (translations[text]) {
+			return translations[text];
+		}
+		return text;
+	}
+
+	$(document).ready(function() {
+		var lang = getLanguage();
+		
+		// Update language toggle link
+		if (lang === 'ko') {
+			$('#lang-toggle').attr('href', '?lang=en').text('In English, please.');
+			$('#intro1').html(introTextKo);
+			$('#intro2').html(intro2TextKo);
+			$('#intro3').html(intro3TextKo);
+		} else {
+			$('#lang-toggle').attr('href', '?lang=ko').text('한글로 보기');
+			$('#intro1').html(introTextEn);
+			$('#intro2').html(intro2TextEn);
+			$('#intro3').html(intro3TextEn);
+		}
+
+		// Translate all elements with data-i18n attribute
+		$('[data-i18n]').each(function() {
+			var key = $(this).data('i18n');
+			$(this).text(t(key));
+		});
+	});
+	</script>
+</head>
+<body>
+	<header class="bg-primary">
+		<div class="container">
+			<div class="left text-big">I am Mijin Choi</div>
+			<div class="right">
+				<a href="?lang=ko" id="lang-toggle">한글로 보기</a>
+			</div>
+		</div>
+	</header>
+	<section class="container">
+		<div class="profile-info">
+			<div class="profile-img">
+				<img src="./mjprofile_square.jpg" />
+			</div>
+			<div class="profile-text">
+				<div class="text-highlight" data-i18n="Mijin Choi">Mijin Choi</div>
+				<div class="myintro" id="intro1"></div>
+				<div class="myintro mt-2" id="intro2"></div>
+				<div class="myintro mt-2" id="intro3"></div>
+				<div>Email: <a href="mailto:luvqueen7@naver.com">luvqueen7@naver.com</a></div>
+				<div>Facebook: <a href="https://www.facebook.com/luvmoonbow" target="_blank">https://www.facebook.com/luvmoonbow</a></div>
+				<div>Instagram: <a href="https://www.instagram.com/luvmoonbow/" target="_blank">https://www.instagram.com/luvmoonbow/</a></div>
+				<div>YouTube: <a href="https://www.youtube.com/channel/UC_w_lFaAdyNzSuodPngwHoQ" target="_blank">Link to my channel</a></div>
+			</div>
+		</div>
+		<div class="section-title">Today</div>
+		<ul class="cont-list">
+			<li class="cont-li" data-i18n="Looking for work">Looking for work ;)</li>
+			<li class="cont-li" data-i18n="Self development">Self-development (SQL, English)</li>
+		</ul>
+		<div class="section-title">Work Experience</div>
+		<ul class="cont-list">
+			<li class="cont-li">
+				<span>2019.09 ~ 2019.12</span><span class="cont-span" data-i18n="Yejongplie">Yejongplie Ballet Academy (retirement due to business closure)</span>
+				<ul>
+					<li data-i18n="Yejongplie work">Business, Finance, Office, Marketing</li>
+				</ul>
+			</li>
+			<li class="cont-li">
+				<span>2009.02 ~ 2019.08</span><span class="cont-span" data-i18n="NHN Bugs">NHN Bugs Corp.</span>
+				<ul>
+					<li>
+						<span>2016.03</span><span class="cont-span" data-i18n="NHN Bugs work 1">Content Planning Team. Bugs content planning and operation, AI operation.</span>
+						<ul>
+							<li data-i18n="NHN Bugs work 1-1">Bugs AI service operation.</li>
+							<li data-i18n="NHN Bugs work 1-2">Bugs MusicPD service management.</li>
+							<li data-i18n="NHN Bugs work 1-3">Bugs contents planning and operation.</li>
+							<li data-i18n="NHN Bugs work 1-4">Bugs classic music contents management.</li>
+						</ul>
+					</li>
+					<li><span>2015.05</span><span class="cont-span" data-i18n="NHN Bugs work 2">NHN Entertainment acquired Neowiz Internet on May 7 and renamed NHN Bugs on August 11.</span></li>
+					<li>
+						<span>2012.03</span><span class="cont-span" data-i18n="NHN Bugs work 3">Neowiz Internet Bugs Service Operation Team. Manage and operate Bugs payments, memberships, services, and customer centers.</span>
+						<ul>
+							<li data-i18n="NHN Bugs work 3-1">Bugs customer center website renewal planning.</li>
+							<li data-i18n="NHN Bugs work 3-2">Bugs CS admintool upgrade planning.</li>
+							<li data-i18n="NHN Bugs work 3-3">Bugs IVR, 1:1 inquiry upgrade planning.</li>
+							<li data-i18n="NHN Bugs work 3-4">Bugs payments, memberships, service voc management.</li>
+							<li data-i18n="NHN Bugs work 3-5">Overall review and improvement of operations before release of Bugs service update.</li>
+							<li data-i18n="NHN Bugs work 3-6">CS operation related service page management such as Bugs announcements and FAQ.</li>
+							<li data-i18n="NHN Bugs work 3-7">Bugs customer center support and management.</li>
+							<li data-i18n="NHN Bugs work 3-8">PG company communication and CS operation related to smishing damage.</li>
+							<li data-i18n="NHN Bugs work 3-9">General management of official documents related to investigation agencies.</li>
+						</ul>
+					</li>
+					<li>
+						<span>2011.02</span><span class="cont-span" data-i18n="NHN Bugs work 4">Neowiz Internet Bugs DB Operation Team. Switched to full-time job.</span>
+						<ul>
+							<li data-i18n="NHN Bugs work 4-1">Music source service planning and PM.</li>
+							<li data-i18n="NHN Bugs work 4-2">Music source DB creation and inspection (main part is classic).</li>
+							<li data-i18n="NHN Bugs work 4-3">General management of music source issuance.</li>
+							<li data-i18n="NHN Bugs work 4-4">Music service exposure work.</li>
+							<li data-i18n="NHN Bugs work 4-5">Bugs music lyrics management.</li>
+						</ul>
+					</li>
+					<li><span>2010.01</span><span class="cont-span" data-i18n="NHN Bugs work 5">Neowiz Bugs merged with Neowiz Internet on January 25 and renamed Neowiz Internet on April 15.</span></li>
+					<li><span>2009.02</span><span class="cont-span" data-i18n="NHN Bugs work 6">Joined Eins Digital Inc. Bugs DB Operation Team.</span></li>
+				</ul>
+			</li>
+			<li class="cont-li">
+				<span>2007.01 ~ 2008.11</span><span class="cont-span" data-i18n="KBS">KBS Broadcasting Content Team</span>
+			</li>
+		</ul>
+		<div class="section-title">Personal Experience</div>
+		<ul class="cont-list">
+			<li class="cont-li"><span>2020.04 ~ 2020.08</span><span class="cont-span" data-i18n="Private Experience 18">Completion of the ballet teacher program (RAD, YSM)</span></li>
+			<li class="cont-li"><span>2018.09 ~ 2020.02</span><span class="cont-span" data-i18n="Private Experience 17">NHN ballet fit club instructor</span></li>
+			<li class="cont-li"><span>2019.03</span><span class="cont-span" data-i18n="Private Experience 1">Seongnam City Ballet foundation performance planning</span></li>
+			<li class="cont-li"><span>2018.10</span><span class="cont-span" data-i18n="Private Experience 2">Ballet solo in the 2nd Community Dance Festival.</span></li>
+			<li class="cont-li"><span>2014.08</span><span class="cont-span" data-i18n="Private Experience 3">Sound design of android app(TAKE FIVE).</span></li>
+			<li class="cont-li"><span>2013.07</span><span class="cont-span" data-i18n="Private Experience 4">Music arrangement of the team who participated in Dancing 9.</span></li>
+			<li class="cont-li"><span>2012.06</span><span class="cont-span" data-i18n="Private Experience 5">Sound design of android app(Piano Keyboard).</span></li>
+			<li class="cont-li"><span>2008 ~ 2011</span><span class="cont-span" data-i18n="Private Experience 6">Arranged music for G.NI jazz dance performance. Composition and arrangement of modern dance music for college entrance examination.</span></li>
+			<li class="cont-li"><span>2007.11</span><span class="cont-span" data-i18n="Private Experience 7">Music composition and arrangement of the team who participated in Haneum Dance Competition.</span></li>
+			<li class="cont-li"><span>2007.01 ~ 2007.09</span><span class="cont-span" data-i18n="Private Experience 8">Conduct choir at Songnae Sungmun Church.</span></li>
+			<li class="cont-li"><span>2006.03 ~ 2006.08</span><span class="cont-span" data-i18n="Private Experience 9">Full-time piano instructor at Woojin Piano Academy.</span></li>
+			<li class="cont-li"><span>2006.02 ~ 2008.04</span><span class="cont-span" data-i18n="Private Experience 10">Promote performances at Moim-Modoo(modern music performance group).</span></li>
+			<li class="cont-li"><span>2005.05</span><span class="cont-span" data-i18n="Private Experience 11">Presentation of contemporary music works at CUK regular presentation.</span></li>
+			<li class="cont-li"><span>2004.11 ~ 2006.12</span><span class="cont-span" data-i18n="Private Experience 12">Conduct choir at Bucheon Uiseong Church.</span></li>
+			<li class="cont-li"><span>2002.07</span><span class="cont-span" data-i18n="Private Experience 13">Participated in the Darmstadt International Contemporary Music Festival.</span></li>
+			<li class="cont-li"><span>2001.01 ~ 2006.12</span><span class="cont-span" data-i18n="Private Experience 14">Conduct high school choir at Bucheon Uiseong Church.</span></li>
+			<li class="cont-li"><span>2000.09 ~ 2001.02</span><span class="cont-span" data-i18n="Private Experience 15">Full-time piano instructor at Creative Music Academy.</span></li>
+			<li class="cont-li"><span>1998.01 ~ 2000.12</span><span class="cont-span" data-i18n="Private Experience 16">Conduct elementary choir at Bucheon Uiseong Church.</span></li>
+		</ul>
+		<div class="section-title">Certifications &amp; Awards</div>
+		<ul class="cont-list">
+			<li class="cont-li"><span>2020.09</span><span class="cont-span" data-i18n="Certifications Awards 10">The 2nd Grade of Kids English Ballet</span></li>
+			<li class="cont-li"><span>2020.09</span><span class="cont-span" data-i18n="Certifications Awards 9">The 2nd Grade of Kids a Correct Posture Ballet</span></li>
+			<li class="cont-li"><span>2020.09</span><span class="cont-span" data-i18n="Certifications Awards 8">The 1st Grade of Certification of Dance Master</span></li>
+			<li class="cont-li"><span>2020.01</span><span class="cont-span" data-i18n="Certifications Awards 1">Certification in Progressing Ballet Technique.</span></li>
+			<li class="cont-li"><span>2019.11</span><span class="cont-span" data-i18n="Certifications Awards 2">Received the Silver Prize at the 51st National Dance Performing Arts Competition.</span></li>
+			<li class="cont-li"><span>2018.09</span><span class="cont-span" data-i18n="Certifications Awards 3">Madam Ballet Grand prix in Tokyo. 4th place.</span></li>
+			<li class="cont-li"><span>2018.07</span><span class="cont-span" data-i18n="Certifications Awards 4">Grand Prize at the 2nd National Dance Competition (1st overall ballet category).</span></li>
+			<li class="cont-li"><span>2017.11</span><span class="cont-span" data-i18n="Certifications Awards 5">Winner of the 1st Ballet Mate Grand Prix Grand Prix Award (1st overall)</span></li>
+			<li class="cont-li"><span>2017.09</span><span class="cont-span" data-i18n="Certifications Awards 6">World Grand Prix Dance Competition Ballet Gold Prize</span></li>
+			<li class="cont-li"><span>2014.12</span><span class="cont-span" data-i18n="Certifications Awards 7">1st Prize in Advertising & Video Music at the 1st Korea Visual Music Festival.</span></li>
+		</ul>
+		<div class="section-title">Education &amp; Other Experience</div>
+		<ul class="cont-list">
+			<li class="cont-li"><span></span>2015<span class="cont-span" data-i18n="Education 1">Dongguk University, Department of Practical Music. Completion of only one semester.</span></li>
+			<li class="cont-li"><span></span>2006<span class="cont-span" data-i18n="Education 2">Graduated from the Catholic University of Music.</span></li>
+			<li class="cont-li"><span></span>1995<span class="cont-span" data-i18n="Education 3">Transfer to Bucheon Girls High School.</span></li>
+			<li class="cont-li"><span></span>1995<span class="cont-span" data-i18n="Education 4">Entered Deokwon High School of Dance and Ballet.</span></li>
+			<li class="cont-li"><span></span>2000.07 ~ 2000.08<span class="cont-span" data-i18n="Education 5">University of Alberta in Edmonton. Language study.</span></li>
+		</ul>
+	</section>
+</body>
+</html>
